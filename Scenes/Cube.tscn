@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=2]
-
-[ext_resource path="res://Materials/Cube.material" type="Material" id=1]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -10,7 +8,7 @@
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
-material/0 = ExtResource( 1 )
+material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )
