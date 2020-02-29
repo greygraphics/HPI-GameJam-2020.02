@@ -16,5 +16,6 @@ material/0 = null
 [node name="SpotLight" type="SpotLight" parent="."]
 light_energy = 5.0
 shadow_enabled = true
+shadow_bias = 1.0
 spot_range = 67.9105
 spot_angle = 15.0
