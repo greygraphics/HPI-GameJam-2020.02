@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/PlayerController.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://Materials/dog.material" type="Material" id=3]
+[ext_resource path="res://Materials/dog_blue.material" type="Material" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.943179

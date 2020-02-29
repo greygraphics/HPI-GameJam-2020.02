@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.s3tc.stex"
-path.etc2="res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.etc2.stex"
+path.s3tc="res://.import/dog_emission.png-74015c10691acfabccf0b52f33ff1e4f.s3tc.stex"
+path.etc2="res://.import/dog_emission.png-74015c10691acfabccf0b52f33ff1e4f.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Materials/CubeSurface_Color.png"
-dest_files=[ "res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.s3tc.stex", "res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.etc2.stex" ]
+source_file="res://Materials/dog_emission.png"
+dest_files=[ "res://.import/dog_emission.png-74015c10691acfabccf0b52f33ff1e4f.s3tc.stex", "res://.import/dog_emission.png-74015c10691acfabccf0b52f33ff1e4f.etc2.stex" ]
 
 [params]
 
