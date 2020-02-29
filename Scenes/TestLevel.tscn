@@ -1,15 +1,25 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/Welt.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Cube.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Voxel.tscn" type="PackedScene" id=4]
 
 [node name="TestLevel" type="Spatial"]
 
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 SPEED = 5.0
+
+[node name="Torch" parent="Player" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212731, 0 )
+CAMERA = NodePath("../../Camera")
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 26.109, 0 )
 fov = 41.4
 
-[node name="Welt" parent="." instance=ExtResource( 1 )]
+[node name="Voxel" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72325, 0.385121, -3.18444 )
