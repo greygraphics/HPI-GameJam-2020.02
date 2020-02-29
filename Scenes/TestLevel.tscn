@@ -12,6 +12,7 @@ transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 SPEED = 5.0
+CAMERA = NodePath("../Camera")
 
 [node name="Torch" parent="Player" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212731, 0 )
