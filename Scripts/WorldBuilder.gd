@@ -36,5 +36,5 @@ func _ready():
 			for z in depth:
 				if(array[x][y][z] > 0.1):
 					var voxel = scene.instance()
-					voxel.get_child(0).set_translation(Vector3(x-width/2,y,z-depth/2))
+					voxel.get_child(0).set_translation(Vector3(x*2-width,y*2,z*2-depth))
 					add_child(voxel)
