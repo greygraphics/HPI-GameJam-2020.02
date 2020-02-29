@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Doggo.obj-d1271a7e62355d7f3130781597e75043.mesh"
+
+[deps]
+
+files=[ "res://.import/Doggo.obj-d1271a7e62355d7f3130781597e75043.mesh" ]
+
+source_file="res://Objects/Doggo.obj"
+dest_files=[ "res://.import/Doggo.obj-d1271a7e62355d7f3130781597e75043.mesh", "res://.import/Doggo.obj-d1271a7e62355d7f3130781597e75043.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
