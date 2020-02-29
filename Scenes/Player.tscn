@@ -9,6 +9,7 @@ radius = 0.943179
 height = 0.0358863
 
 [node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -17,6 +18,6 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-09, 0, 0.01, 0, 0.01, 0, -0.01, 0, -1.62921e-09, 0, 0.699383, 0 )
-visible = false
+cast_shadow = 0
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 3 )
