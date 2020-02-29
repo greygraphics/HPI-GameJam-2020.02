@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.s3tc.stex"
-path.etc2="res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.etc2.stex"
+path.s3tc="res://.import/dog_blue.png-343bdcf14d4494ed1abbabba8cc97631.s3tc.stex"
+path.etc2="res://.import/dog_blue.png-343bdcf14d4494ed1abbabba8cc97631.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Materials/CubeSurface_Color.png"
-dest_files=[ "res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.s3tc.stex", "res://.import/CubeSurface_Color.png-f180110466b01b01aa002b85b3c21ec0.etc2.stex" ]
+source_file="res://Materials/dog_blue.png"
+dest_files=[ "res://.import/dog_blue.png-343bdcf14d4494ed1abbabba8cc97631.s3tc.stex", "res://.import/dog_blue.png-343bdcf14d4494ed1abbabba8cc97631.etc2.stex" ]
 
 [params]
 
@@ -22,7 +22,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=false
+flags/filter=true
 flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=1
