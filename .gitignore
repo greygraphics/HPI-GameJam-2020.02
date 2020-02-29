@@ -1,3 +1,4 @@
 project.godot
 default_env.tres
-
+.import
+.DS_Store
