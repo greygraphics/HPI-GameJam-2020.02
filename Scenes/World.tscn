@@ -3,4 +3,5 @@
 [ext_resource path="res://Scripts/WorldBuilder.gd" type="Script" id=1]
 
 [node name="Welt" type="Spatial"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 script = ExtResource( 1 )
