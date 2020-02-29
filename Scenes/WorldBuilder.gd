@@ -1,18 +1,36 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var width = 10
+var height = 3
+var depth = 10
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	var array = []
+	array.resize(width)
+	for x in width:
+		array[x] = []
+		array[x].resize(height)
+		for y in height:
+			array[x][y] = []
+			array[x][y].resize(depth) 
+	
+	var map = load("res://Objects/map.png")
+	
+	for x in width:
+		for y in height:
+			for z in depth:
+				if(y == 0):
+					array[x][y][z] = 1
+				else:
+					array[x][y][z] = map.get_pixel(x,z);
+	
 	var scene = load("res://Scenes/Voxel.tscn")
-	var voxel = scene.instance()
-	add_child(voxel)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	for x in width:
+		for y in height:
+			for z in depth:
+				if(array[x][y][z] == 1):
+					var voxel = scene.instance()
+					voxel.get_child(0).set_translation(Vector3(x-width/2,y,z-depth/2))
+					add_child(voxel)
