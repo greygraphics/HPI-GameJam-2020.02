@@ -26,7 +26,7 @@ func _ready():
 			map.unlock()
 			for y in height:
 				if(y == 0):
-					array[x][y][z] = 1
+					array[x][y][z] = 0
 				else:
 					array[x][y][z] = val
 	
@@ -34,7 +34,7 @@ func _ready():
 	for x in width:
 		for y in height:
 			for z in depth:
-				if(array[x][y][z] > 0.1):
+				if(array[x][y][z] < 0.5):
 					var voxel = scene.instance()
 					voxel.get_child(0).set_translation(Vector3(x*2-width,y*2,z*2-depth))
 					add_child(voxel)
