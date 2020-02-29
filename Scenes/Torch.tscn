@@ -14,8 +14,9 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.999914, 0.0130896, 0, -0.0130896, 0.999914, 0, 0, 0 )
 light_energy = 5.0
 shadow_enabled = true
-shadow_bias = 1.0
+shadow_bias = 0.75
 spot_range = 67.9105
 spot_angle = 15.0
