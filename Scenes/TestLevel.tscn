@@ -16,7 +16,6 @@ CAMERA = NodePath("../Camera")
 
 [node name="Torch" parent="Player" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212731, 0 )
-CAMERA = NodePath("../../Camera")
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 26.109, 0 )
