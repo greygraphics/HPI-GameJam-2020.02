@@ -11,9 +11,12 @@ script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( -1, 1.51032e-06, 1.99736e-14, 0, -7.55161e-07, 0.376248, 3.25841e-07, 4.63515, 6.12986e-08, 0.000379205, -0.00404298, -5.28592 )
+visible = false
 mesh = SubResource( 1 )
 material/0 = null
 
 [node name="SpotLight" type="SpotLight" parent="."]
-spot_range = 14.1877
-spot_angle = 5.13622
+light_energy = 5.0
+shadow_enabled = true
+spot_range = 67.9105
+spot_angle = 15.0

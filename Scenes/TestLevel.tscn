@@ -13,7 +13,7 @@ transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
 SPEED = 5.0
 
 [node name="Torch" parent="Player" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.48778, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212731, 0 )
 CAMERA = NodePath("../../Camera")
 
 [node name="Camera" type="Camera" parent="."]
@@ -21,4 +21,4 @@ transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 26.1
 fov = 41.4
 
 [node name="Cube" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3831, 1.80761, -4.23722 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.383, 1, -4.237 )
