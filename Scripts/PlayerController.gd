@@ -5,6 +5,7 @@ export(float) var SPEED = 10
 export(NodePath) var CAMERA
 export(NodePath) var WORLD
 export(Material) var DOG_MAT
+export(NodePath) var OTHER_PLAYER
 
 var camera : Camera
 var velocity = Vector3()
@@ -19,6 +20,7 @@ var joy_name = ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	torch = $Torch
+	torch.target = get_node_or_null(OTHER_PLAYER)
 	camera = get_node_or_null(CAMERA)
 	splatterer.world = get_node_or_null(WORLD)
 	joy_name = "joy" + str(JOY_INDEX)

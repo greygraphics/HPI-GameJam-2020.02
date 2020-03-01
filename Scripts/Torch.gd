@@ -1,24 +1,24 @@
 extends Spatial
 
-export(NodePath) var CAMERA
-
-var camera: Camera
-var mousePos: Vector2
+var target: Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	camera = get_node_or_null(CAMERA)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var dropPlane = Plane(Vector3.UP,translation.y)
-	var pos3d = dropPlane.intersects_ray(
-		camera.project_ray_origin(mousePos),camera.project_ray_normal(mousePos))
-	look_at(pos3d,Vector3.UP)
+	pass
 
-func _input(event):
-	if event is InputEventMouseMotion:
-		mousePos = event.position
-		
+func _physics_process(delta):
+	# Test if other player is in cone
+	var my_global_translation = to_global(translation)
+	var target_global_translation = to_global(target.translation)
+	var direction = to_local(my_global_translation.direction_to(target_global_translation))
+	var dot = Vector3.FORWARD.dot(direction)
+	var angle = acos(dot)
+	if abs(angle) < 25:
+		print(target.name + " is in sight!")
+	
+	pass

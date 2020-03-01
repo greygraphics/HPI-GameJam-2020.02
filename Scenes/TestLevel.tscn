@@ -9,6 +9,9 @@
 
 [node name="TestLevel" type="Spatial"]
 
+[node name="Cube" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.121327, -0.636425, 0.761736, 0.853974, 0.324251, 0.406928, -0.505973, 0.699874, 0.50415, -1.84405, 1.4105, -4.95387 )
+
 [node name="Floor" parent="." instance=ExtResource( 1 )]
 transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
 visible = false
@@ -29,13 +32,16 @@ SPEED = 1000.0
 CAMERA = NodePath("../Camera")
 WORLD = NodePath("../World")
 DOG_MAT = ExtResource( 3 )
+OTHER_PLAYER = NodePath("../Cube")
 DEADZONE = 0.3
 
 [node name="Player_Blue" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81376, 0, 1 )
+visible = false
 SPEED = 1000.0
 CAMERA = NodePath("../Camera")
 WORLD = NodePath("../World")
 DOG_MAT = ExtResource( 6 )
+OTHER_PLAYER = NodePath("../Player_Red")
 JOY_INDEX = 1
 DEADZONE = 0.3
