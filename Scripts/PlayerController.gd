@@ -2,12 +2,10 @@ extends KinematicBody
 
 export(float) var SPEED = 10
 
-export(NodePath) var CAMERA
 export(NodePath) var WORLD
 export(Material) var DOG_MAT
 export(NodePath) var OTHER_PLAYER
 
-var camera : Camera
 var velocity = Vector3()
 var mousePos: Vector2
 var torch
@@ -21,7 +19,6 @@ var joy_name = ""
 func _ready():
 	torch = $Torch
 	torch.target = get_node_or_null(OTHER_PLAYER)
-	camera = get_node_or_null(CAMERA)
 	splatterer.world = get_node_or_null(WORLD)
 	joy_name = "joy" + str(JOY_INDEX)
 	$MeshInstance.material_override = DOG_MAT
@@ -60,6 +57,5 @@ func look(delta):
 	if abs(hor) > DEADZONE or abs(ver) > DEADZONE:
 		rotation_degrees.y = rad2deg(rot)
 
-func _input(event):
-	if event is InputEventMouseMotion:
-		mousePos = event.position
+func _is_hit():
+	splatterer._is_hit()
