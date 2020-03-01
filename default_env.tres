@@ -9,4 +9,3 @@ ambient_light_color = Color( 1, 1, 1, 1 )
 tonemap_mode = 3
 tonemap_exposure = 0.89
 tonemap_white = 0.89
-auto_exposure_enabled = true
