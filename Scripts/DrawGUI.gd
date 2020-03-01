@@ -26,9 +26,8 @@ func _process(delta):
 	
 	time_now = OS.get_unix_time()
 	var elapsed = time_now - time_start
-	var minutes = elapsed / 60
 	var seconds = elapsed % 60
-	var str_elapsed = "%02d : %02d" % [minutes, seconds] 
+	var str_elapsed = "%02d" % [TIME_LIMIT - seconds] 
 	
 	if(elapsed > TIME_LIMIT):
 		get_tree().change_scene("res://Scenes/Menu.tscn")
