@@ -2,6 +2,7 @@ extends Spatial
 
 var target: Spatial
 var in_sight = false
+var on = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +14,8 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
+	if !on: 
+		return
 	# Test if other player is in cone
 	var my_global_translation = to_global(translation)
 	my_global_translation.y = 0

@@ -25,6 +25,7 @@ material/0 = null
 
 [node name="Torch" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.355007, -1.46034 )
+visible = false
 script = ExtResource( 1 )
 
 [node name="Splatterer" type="Spatial" parent="."]

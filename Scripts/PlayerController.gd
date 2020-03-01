@@ -39,8 +39,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("torch" + str(JOY_INDEX)):
 		if torch.is_visible_in_tree():
 			torch.hide()
+			torch.on = false
 		else:
 			torch.show()
+			torch.on = true
 	
 func move(delta):
 	var hor = Input.get_action_strength(joy_name + "_right") - Input.get_action_strength(joy_name + "_left")
