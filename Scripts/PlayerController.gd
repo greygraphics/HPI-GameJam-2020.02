@@ -46,7 +46,7 @@ func _process(delta):
 func move(delta):
 	var hor = Input.get_action_strength(joy_name + "_right") - Input.get_action_strength(joy_name + "_left")
 	var ver = Input.get_action_strength(joy_name + "_down") - Input.get_action_strength(joy_name + "_up")
-	var movement = Vector3(hor,0,ver)
+	var movement = Vector3(hor,0,ver).normalized()
 	movement *= SPEED * delta
 	velocity = move_and_slide(movement,Vector3.UP)
 
