@@ -16,4 +16,5 @@ func _ready():
 #	pass
 
 func _is_hit():
+	print("Cube hit!")
 	pass

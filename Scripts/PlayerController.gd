@@ -48,6 +48,7 @@ func move(delta):
 	var movement = Vector3(hor,0,ver).normalized()
 	movement *= SPEED * delta
 	velocity = move_and_slide(movement,Vector3.UP)
+	translation.y = 0
 
 
 func look(delta):
