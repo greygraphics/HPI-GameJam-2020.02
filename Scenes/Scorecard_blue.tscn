@@ -12,8 +12,8 @@ margin_top = 250.0
 margin_right = 935.0
 margin_bottom = 614.0
 custom_fonts/normal_font = ExtResource( 1 )
-custom_colors/default_color = Color( 1, 0, 0, 1 )
-text = "RED WON!"
+custom_colors/default_color = Color( 0, 0, 1, 1 )
+text = "BLUE WON!"
 __meta__ = {
 "_edit_use_anchors_": false
 }

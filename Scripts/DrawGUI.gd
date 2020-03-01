@@ -30,7 +30,12 @@ func _process(delta):
 	var str_elapsed = "%02d" % [TIME_LIMIT - seconds] 
 	
 	if(elapsed > TIME_LIMIT):
-		get_tree().change_scene("res://Scenes/Menu.tscn")
+		if r == b:
+			get_tree().change_scene("res://Scenes/Scorecard_nobody.tscn")
+		elif r > b:
+			get_tree().change_scene("res://Scenes/Scorecard_blue.tscn")
+		else:
+			get_tree().change_scene("res://Scenes/Scorecard_red.tscn")
 	
 	push_color(Color(1,1,1))
 	add_text("\n"+str_elapsed)
