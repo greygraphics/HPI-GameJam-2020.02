@@ -1,0 +1,148 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Objects/fishes-friends/Fishes_Friends_Bold.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Menuuu.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/light.gd" type="Script" id=3]
+[ext_resource path="res://Objects/Player.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="ConcavePolygonShape" id=5]
+margin = 0.443
+
+[sub_resource type="PlaneMesh" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="BoxShape" id=8]
+
+[sub_resource type="CubeMesh" id=9]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 4, 10 )
+fov = 37.5
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.01428, 0 )
+spot_range = 10.0
+spot_angle = 15.0
+script = ExtResource( 3 )
+CAMERA = NodePath("../Camera")
+
+[node name="Wall" type="Spatial" parent="."]
+
+[node name="Back" type="StaticBody" parent="Wall"]
+transform = Transform( 7, 0, 0, 0, 4.5, 0, 0, 0, 0.5, 0, 4.5, -2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall/Back"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall/Back"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="NotBack" type="StaticBody" parent="Wall"]
+transform = Transform( 0.5, 0, 0, 0, 4.5, 0, 0, 0, 3, 6, 4.5, -5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall/NotBack"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall/NotBack"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="NotBack2" type="StaticBody" parent="Wall"]
+transform = Transform( 0.5, 0, 0, 0, 4.5, 0, 0, 0, 3, -6, 4.5, -5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall/NotBack2"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall/NotBack2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 7, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0 )
+__meta__ = {
+"_editor_description_": "w"
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.077
+anchor_top = 0.268
+anchor_right = 0.382
+anchor_bottom = 0.389
+margin_left = -34.3552
+margin_top = 334.794
+margin_right = -31.6753
+margin_bottom = 349.954
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Button"]
+anchor_left = -2.4
+anchor_top = -1.245
+anchor_right = 3.491
+anchor_bottom = 1.647
+margin_left = 0.683594
+margin_top = 38.7438
+margin_right = 0.678589
+margin_bottom = 64.5518
+custom_fonts/font = SubResource( 7 )
+text = "START"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4376, 1, 0.957547 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Box2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25162, 1, -0.7977 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box2"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box2"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.00899077, 0, 0.00437791, 0, 0.01, 0, -0.00437791, 0, 0.00899077, 2.20871, 2.8758, 1.51022 )
+visible = false
+mesh = ExtResource( 4 )
+material/0 = null
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
