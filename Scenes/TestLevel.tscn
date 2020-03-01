@@ -26,3 +26,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.870114, 0 )
 SPEED = 1000.0
 CAMERA = NodePath("../Camera")
 WORLD = NodePath("../World")
+DEADZONE = 0.3

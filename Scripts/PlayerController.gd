@@ -25,6 +25,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	move(delta)
+	look(delta)
 	
 	#character rotation
 	
@@ -46,6 +47,14 @@ func move(delta):
 	var movement = Vector3(hor,0,ver)
 	movement *= SPEED * delta
 	velocity = move_and_slide(movement,Vector3.UP)
+
+
+func look(delta):
+	var hor = Input.get_action_strength(joy_name + "_look-right") - Input.get_action_strength(joy_name + "_look-left")
+	var ver = Input.get_action_strength(joy_name + "_look-up") - Input.get_action_strength(joy_name + "_look-down")
+	var rot = atan2(-hor,ver)
+	if abs(hor) > DEADZONE or abs(ver) > DEADZONE:
+		rotation_degrees.y = rad2deg(rot)
 
 func _input(event):
 	if event is InputEventMouseMotion:
