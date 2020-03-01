@@ -4,6 +4,7 @@ export(float) var SPEED = 10
 
 export(NodePath) var CAMERA
 export(NodePath) var WORLD
+export(Material) var DOG_MAT
 
 var camera : Camera
 var velocity = Vector3()
@@ -21,6 +22,7 @@ func _ready():
 	camera = get_node_or_null(CAMERA)
 	splatterer.world = get_node_or_null(WORLD)
 	joy_name = "joy" + str(JOY_INDEX)
+	$MeshInstance.material_override = DOG_MAT
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -35,7 +37,7 @@ func _process(delta):
 #	look_at(pos3d, Vector3.UP)
 	
 	#flashlight on/off
-	if Input.is_action_just_pressed("torch"):
+	if Input.is_action_just_pressed("torch" + str(JOY_INDEX)):
 		if torch.is_visible_in_tree():
 			torch.hide()
 		else:
