@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Cube.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player_Base.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Materials/dog_red.material" type="Material" id=3]
 [ext_resource path="res://Scenes/Voxel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/ScoreGUI.tscn" type="PackedScene" id=6]
 
 [node name="TestLevel" type="Spatial"]
 
@@ -33,3 +34,5 @@ WORLD = NodePath("../World")
 DOG_MAT = ExtResource( 3 )
 OTHER_PLAYER = NodePath("../Cube")
 DEADZONE = 0.3
+
+[node name="GUI" parent="." instance=ExtResource( 6 )]

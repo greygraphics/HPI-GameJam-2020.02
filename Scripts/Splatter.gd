@@ -19,7 +19,7 @@ func _is_hit():
 	default = ResourceLoader.load("res://Materials/Cube_default.tres")
 	
 	var i = 0
-	var world = get_tree().get_root().get_node("TestLevelRaphael").find_node("World")
+#	var world = get_tree().get_root().get_node("TestLevelRaphael").find_node("World")
 	for voxel in world.get_children():
 		var vox_pos = voxel.get_child(0).translation
 		var dist = player_pos.distance_to(vox_pos)
@@ -48,7 +48,7 @@ func _process(delta):
 
 
 func set_score(before, after):
-	var gui = get_tree().get_root().get_node("TestLevelRaphael").find_node("GUI").get_child(0).get_child(0)
+	var gui = get_tree().get_root().get_node("TestLevel").find_node("GUI").get_child(0).get_child(0)
 	if(before == 0):
 		if(after == 1):
 			gui.r += 1
