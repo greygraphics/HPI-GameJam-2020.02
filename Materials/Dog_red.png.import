@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/map.png-2f740845c8bacbd484399689762e2ef5.stex"
+path="res://.import/Dog_red.png-85a7c2f6b8816fd60b4b138f95c9eed7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/map.png"
-dest_files=[ "res://.import/map.png-2f740845c8bacbd484399689762e2ef5.stex" ]
+source_file="res://Materials/Dog_red.png"
+dest_files=[ "res://.import/Dog_red.png-85a7c2f6b8816fd60b4b138f95c9eed7.stex" ]
 
 [params]
 
@@ -19,8 +19,8 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=false
+flags/repeat=0
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
