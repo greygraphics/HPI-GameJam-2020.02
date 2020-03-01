@@ -11,11 +11,14 @@
 
 [node name="Floor" parent="." instance=ExtResource( 1 )]
 transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
-visible = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+<<<<<<< HEAD
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8 )
 SPEED = 4.01
+=======
+SPEED = 10.0
+>>>>>>> c99422e8fd3b00cab400596695c9ec1f060e96d8
 CAMERA = NodePath("../Camera")
 
 [node name="Torch" parent="Player" instance=ExtResource( 3 )]
@@ -31,7 +34,6 @@ far = 220.0
 
 [node name="Voxel" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72325, 0.385121, -3.18444 )
-visible = false
 
 [node name="World" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.870114, 0 )
