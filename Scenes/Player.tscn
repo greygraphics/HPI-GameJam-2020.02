@@ -5,8 +5,8 @@
 [ext_resource path="res://Materials/dog_blue.material" type="Material" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.943179
-height = 0.0358863
+radius = 0.457952
+height = 1.83542
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
