@@ -37,4 +37,5 @@ SPEED = 1000.0
 CAMERA = NodePath("../Camera")
 WORLD = NodePath("../World")
 DOG_MAT = ExtResource( 6 )
+JOY_INDEX = 1
 DEADZONE = 0.3
