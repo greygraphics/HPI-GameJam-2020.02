@@ -1,6 +1,6 @@
 extends KinematicBody
 
-export(float) var SPEED = 1
+export(float) var SPEED = 1000
 
 export(NodePath) var CAMERA
 var camera : Camera
