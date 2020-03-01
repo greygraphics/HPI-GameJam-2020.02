@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dog_red.png-85a7c2f6b8816fd60b4b138f95c9eed7.stex"
+path="res://.import/dog_red.png-a30f09b07c0d8186a5471f765a787447.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Materials/Dog_red.png"
-dest_files=[ "res://.import/Dog_red.png-85a7c2f6b8816fd60b4b138f95c9eed7.stex" ]
+source_file="res://Materials/dog_red.png"
+dest_files=[ "res://.import/dog_red.png-a30f09b07c0d8186a5471f765a787447.stex" ]
 
 [params]
 
