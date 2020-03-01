@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Objects/fishes-friends/Fishes_Friends_Bold.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Materials/Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/Menuuu.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/light.gd" type="Script" id=3]
 [ext_resource path="res://Objects/Player.obj" type="ArrayMesh" id=4]
@@ -18,13 +18,9 @@ margin = 0.443
 
 [sub_resource type="PlaneMesh" id=6]
 
-[sub_resource type="DynamicFont" id=7]
-size = 100
-font_data = ExtResource( 1 )
+[sub_resource type="BoxShape" id=7]
 
-[sub_resource type="BoxShape" id=8]
-
-[sub_resource type="CubeMesh" id=9]
+[sub_resource type="CubeMesh" id=8]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 2 )
@@ -49,7 +45,6 @@ transform = Transform( 7, 0, 0, 0, 4.5, 0, 0, 0, 0.5, 0, 4.5, -2 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall/Back"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -112,7 +107,7 @@ margin_left = 0.683594
 margin_top = 38.7438
 margin_right = 0.678589
 margin_bottom = 64.5518
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = ExtResource( 1 )
 text = "START"
 align = 1
 valign = 1
@@ -124,20 +119,20 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4376, 1, 0.957547 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Box"]
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Box"]
-mesh = SubResource( 9 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="Box2" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25162, 1, -0.7977 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Box2"]
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Box2"]
-mesh = SubResource( 9 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="MeshInstance" type="MeshInstance" parent="."]

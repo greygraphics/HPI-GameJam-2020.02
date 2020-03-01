@@ -14,12 +14,12 @@ func _ready():
 	mat2 = ResourceLoader.load("res://Materials/Cube_clr2.tres")
 
 
-func _is_hit():
+func _is_hit(n):
 	var player_pos = to_global(translation)
 	default = ResourceLoader.load("res://Materials/Cube_default.tres")
 	
 	var i = 0
-	var world = get_tree().get_root().get_node("TestLevelRaphael").find_node("World")
+#	var world = get_tree().get_root().get_node("TestLevelRaphael").find_node("World")
 	for voxel in world.get_children():
 		var vox_pos = voxel.get_child(0).translation
 		var dist = player_pos.distance_to(vox_pos)
@@ -27,7 +27,7 @@ func _is_hit():
 
 		var mesh = voxel.get_child(0).get_child(0)
 		if(dist < 5):
-			var after = 1
+			var after = n
 			var before = 0
 			var material = mesh.get_material_override()
 			if(material):
@@ -39,16 +39,13 @@ func _is_hit():
 			
 			set_score(before,after)
 			
-			if(true):
+			if(after == 1):
 				mesh.set_material_override(mat1)
-				
-func _process(delta):
-	if Input.is_action_just_pressed("torch"):
-		_is_hit()
-
+			else:
+				mesh.set_material_override(mat2)
 
 func set_score(before, after):
-	var gui = get_tree().get_root().get_node("TestLevelRaphael").find_node("GUI").get_child(0).get_child(0)
+	var gui = get_tree().get_root().get_node("TestLevel").find_node("GUI").get_child(0).get_child(0)
 	if(before == 0):
 		if(after == 1):
 			gui.r += 1
