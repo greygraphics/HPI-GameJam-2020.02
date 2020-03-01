@@ -5,6 +5,7 @@ export(float) var SPEED = 10
 export(NodePath) var WORLD
 export(Material) var DOG_MAT
 export(NodePath) var OTHER_PLAYER
+export(Material) var SPLATTER_MAT
 
 var velocity = Vector3()
 var mousePos: Vector2
@@ -61,4 +62,4 @@ func look(delta):
 		rotation_degrees.y = rad2deg(rot)
 
 func _is_hit():
-	splatterer._is_hit()
+	splatterer._is_hit(JOY_INDEX + 1)
