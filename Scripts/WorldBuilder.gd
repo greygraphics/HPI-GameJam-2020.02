@@ -17,7 +17,7 @@ func _ready():
 			array[x][y].resize(depth) 
 	
 	var map = Image.new()
-	map.load("res://Objects/map.png")
+	map.load("res://Objects/map_2.png")
 	
 	for x in width:
 		for z in depth:

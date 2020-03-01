@@ -10,15 +10,12 @@
 
 [node name="TestLevel" type="Spatial"]
 
-[node name="Cube" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.121327, -0.636425, 0.761736, 0.853974, 0.324251, 0.406928, -0.505973, 0.699874, 0.50415, -1.84405, 1.4105, -4.95387 )
-
 [node name="Floor" parent="." instance=ExtResource( 1 )]
 transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
 visible = false
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 70, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 93.9142, -3.89612e-06 )
 fov = 41.4
 
 [node name="Voxel" parent="." instance=ExtResource( 4 )]
@@ -32,7 +29,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.870114, 0 )
 SPEED = 1000.0
 WORLD = NodePath("../World")
 DOG_MAT = ExtResource( 3 )
-OTHER_PLAYER = NodePath("../Cube")
 DEADZONE = 0.3
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
