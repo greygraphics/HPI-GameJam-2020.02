@@ -63,8 +63,8 @@ func look(delta):
 	var hor = Input.get_action_strength(joy_name + "_look-right") - Input.get_action_strength(joy_name + "_look-left")
 	var ver = Input.get_action_strength(joy_name + "_look-up") - Input.get_action_strength(joy_name + "_look-down")
 	var rot = atan2(-hor,ver)
-	if abs(hor) > DEADZONE or abs(ver) > DEADZONE:
-		rotation_degrees.y = rad2deg(rot)
+#	if abs(hor) > DEADZONE or abs(ver) > DEADZONE:
+	rotation_degrees.y = rad2deg(rot)
 
 func _is_hit():
 	splatterer._is_hit(JOY_INDEX + 1)

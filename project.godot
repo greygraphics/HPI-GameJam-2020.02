@@ -19,6 +19,10 @@ config/name="Bloodtoon"
 run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/height=900
+
 [input]
 
 ui_left={
