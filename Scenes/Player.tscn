@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/PlayerController.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Player.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Materials/dog_blue.material" type="Material" id=3]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.457952
+height = 1.83542
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.3, 0, 0, 0, 1, 0, 0, 0, 0.9, 0.00517964, 0.84423, -0.215898 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( -1.62921e-09, 0, 0.01, 0, 0.01, 0, -0.01, 0, -1.62921e-09, 0, 0.699383, 0 )
+cast_shadow = 0
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )

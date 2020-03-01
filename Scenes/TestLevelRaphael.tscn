@@ -1,15 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Cube.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Voxel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Materials/dog_red.material" type="Material" id=6]
+[ext_resource path="res://Scenes/ScoreGUI.tscn" type="PackedScene" id=7]
 
-[node name="TestLevel" type="Spatial"]
-
-[node name="Cube" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.121327, -0.636425, 0.761736, 0.853974, 0.324251, 0.406928, -0.505973, 0.699874, 0.50415, -1.84405, 1.4105, -4.95387 )
+[node name="TestLevelRaphael" type="Spatial"]
 
 [node name="Floor" parent="." instance=ExtResource( 1 )]
 transform = Transform( 10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0 )
@@ -17,13 +16,12 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 SPEED = 4.01
-CAMERA = NodePath("../Camera")
+CAMERA = NodePath("../../TestLevelRaphael/Camera")
+WORLD = NodePath("../World")
+DOG_MAT = ExtResource( 6 )
 
 [node name="Torch" parent="Player" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212731, 0 )
-
-[node name="Node" type="Node" parent="Player"]
-script = ExtResource( 6 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 70, 0 )
@@ -36,10 +34,4 @@ visible = false
 [node name="World" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.870114, 0 )
 
-[node name="Player_Red" parent="." instance=ExtResource( 2 )]
-SPEED = 1000.0
-CAMERA = NodePath("../Camera")
-WORLD = NodePath("../World")
-DOG_MAT = ExtResource( 3 )
-OTHER_PLAYER = NodePath("../Cube")
-DEADZONE = 0.3
+[node name="GUI" parent="." instance=ExtResource( 7 )]
