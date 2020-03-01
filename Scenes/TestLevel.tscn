@@ -26,18 +26,22 @@ visible = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.870114, 0 )
 
 [node name="Player_Red" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 28 )
 SPEED = 1000.0
 WORLD = NodePath("../World")
 DOG_MAT = ExtResource( 3 )
+OTHER_PLAYER = NodePath("../Player_Blue")
+LIGHT_COLOR = Color( 1, 0, 0, 1 )
 DEADZONE = 0.3
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="Player_Blue" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45222, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -30 )
 SPEED = 1000.0
 WORLD = NodePath("../World")
 DOG_MAT = ExtResource( 7 )
 OTHER_PLAYER = NodePath("../Player_Red")
+LIGHT_COLOR = Color( 0, 0, 1, 1 )
 JOY_INDEX = 1
 DEADZONE = 0.3

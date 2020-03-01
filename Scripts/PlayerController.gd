@@ -6,6 +6,7 @@ export(NodePath) var WORLD
 export(Material) var DOG_MAT
 export(NodePath) var OTHER_PLAYER
 export(Material) var SPLATTER_MAT
+export(Color) var LIGHT_COLOR
 
 var velocity = Vector3()
 var mousePos: Vector2
@@ -19,6 +20,8 @@ var joy_name = ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	torch = $Torch
+#	$Torch._set_color(LIGHT_COLOR)
+	$OmniLight.light_color = LIGHT_COLOR
 	torch.target = get_node_or_null(OTHER_PLAYER)
 	splatterer.world = get_node_or_null(WORLD)
 	joy_name = "joy" + str(JOY_INDEX)
@@ -40,9 +43,11 @@ func _process(delta):
 	if Input.is_action_just_pressed("torch" + str(JOY_INDEX)):
 		if torch.is_visible_in_tree():
 			torch.hide()
+			$OmniLight.hide()
 			torch.on = false
 		else:
 			torch.show()
+			$OmniLight.show()
 			torch.on = true
 	
 func move(delta):

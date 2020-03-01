@@ -5,7 +5,8 @@ var in_sight = false
 var on = false
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _set_color(color):
+	$SpotLight.light_color = color
 	pass # Replace with function body.
 
 
